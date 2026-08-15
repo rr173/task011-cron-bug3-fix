@@ -188,7 +188,7 @@ func parseRange(s string, min, max int, names map[string]int) (int, int, error) 
 	if err != nil {
 		return 0, 0, err
 	}
-	if lo >= hi {
+	if lo > hi {
 		return 0, 0, ErrBadRange
 	}
 	return lo, hi, nil
